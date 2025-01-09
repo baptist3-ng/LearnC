@@ -94,3 +94,27 @@ char buf[255]; // A line is 254 char (\n include) MAX
 if (fgets(buf, sizeof buf, fp) != NULL)
         printf("%s\n", buf);
 ```
+
+- Errors & End Of File
+```c
+// Definition : int feof(FILE *flux);
+// Return : != 0 when EOF
+
+// Definition : int ferror(FILE *flux);
+// Return : != 0 when error
+```
+
+- Position
+```c
+// Definition : long ftell(FILE *flux);
+// Return : Actual position or < 0 when error
+
+// Definition : int fseek(FILE *flux, long distance, int repere);
+// Return : 0 when success
+
+// Definition : int fgetpos(FILE *flux, fpos_t *position);
+// Return : 0 when success
+
+// Definition : int fsetpos(FILE *flux, fpos_t *position);
+// Return : 0 when success
+```
