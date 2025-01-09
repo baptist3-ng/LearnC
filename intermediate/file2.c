@@ -32,5 +32,6 @@ int main(void)
 
 	if (fclose(fp) == EOF)
 		return EXIT_FAILURE;
+
 	return 0;
 }
